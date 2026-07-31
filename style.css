@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #22262e;
+}
+
+.topo {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.topo img {
+   width: 150px;
+}
+
+.config-api {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.config-api input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    width: 220px;
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px 60px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cartao {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cartao h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+.cartao h3 {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 8px;
+}
+
+.grade-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444444;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 2px rgba(46, 90, 168, 0.15);
+}
+
+.tabela-produtos,
+.tabela-lista {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.tabela-produtos th,
+.tabela-lista th {
+    text-align: left;
+    font-size: 12px;
+    color: #666666;
+    border-bottom: 2px solid #eeeeee;
+    padding: 6px 4px;
+}
+
+.tabela-produtos td,
+.tabela-lista td {
+    padding: 6px 4px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.tabela-produtos input {
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+.botao {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.botao.primario {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.botao.primario:hover {
+    background-color: #3f3f3f;
+}
+
+.botao.secundario {
+    background-color: #eef1f7;
+    color: #000000;
+}
+
+.botao.secundario:hover {
+    background-color: #e2e7f2;
+}
+
+.botao.remover {
+    background-color: #fdeaea;
+    color: #c0392b;
+    padding: 6px 10px;
+}
+
+.botao.remover:hover {
+    background-color: #f8d4d4;
+}
+
+.botao.link {
+    background: none;
+    color: #2e5aa8;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 13px;
+}
+
+.total-preview {
+    text-align: right;
+    font-size: 14px;
+    margin: 12px 0;
+    color: #444444;
+}
+
+.acoes-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mensagem {
+    font-size: 13px;
+    min-height: 18px;
+    margin: 8px 0;
+}
+
+.mensagem.sucesso {
+    color: #1e7e34;
+}
+
+.mensagem.erro {
+    color: #c0392b;
+}
+
+.cabecalho-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acoes-linha {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .grade-2 {
+        grid-template-columns: 1fr;
+    }
+    .config-api input {
+        width: 160px;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamentos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="topo">
+        
+        <img src="assets/logoafprint.png" alt="">
+        
+        <h1>Orçamentos</h1>
+
+    </header>
+
+    <main class="conteudo">
+
+        <!-- Formulário de criação -->
+        <section class="cartao">
+            <h2>Novo orçamento</h2>
+            <form id="formOrcamento">
+
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="nomeCliente">Nome do cliente</label>
+                        <input type="text" id="nomeCliente" required />
+                    </div>
+                    <div class="campo">
+                        <label for="cpfCnpj">CPF/CNPJ</label>
+                        <input type="text" id="cpfCnpj" required />
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="dataValidade">Válido até</label>
+                    <input type="date" id="dataValidade" required />
+                </div>
+
+                <h3>Produtos</h3>
+                <table class="tabela-produtos" id="tabelaProdutos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Qtd.</th>
+                            <th>Valor unitário (R$)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoProdutos">
+                        <!-- linhas de produto inseridas via JS -->
+                    </tbody>
+                </table>
+
+                <button type="button" id="btnAddProduto" class="botao secundario">+ Adicionar produto</button>
+
+                <div class="total-preview">
+                    Total estimado: <strong id="totalPreview">R$ 0,00</strong>
+                </div>
+
+                <div class="acoes-form">
+                    <button type="submit" class="botao primario">Criar orçamento</button>
+                </div>
+
+                <p id="mensagemForm" class="mensagem"></p>
+            </form>
+        </section>
+
+        <!-- Lista de orçamentos -->
+        <section class="cartao">
+            <div class="cabecalho-lista">
+                <h2>Orçamentos criados</h2>
+                <button type="button" id="btnAtualizarLista" class="botao secundario">Atualizar lista</button>
+            </div>
+            <p id="mensagemLista" class="mensagem"></p>
+            <table class="tabela-lista">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Válido até</th>
+                        <th>Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoLista">
+                    <!-- linhas inseridas via JS -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- template de linha de produto (clonado via JS) -->
+    <template id="templateLinhaProduto">
+        <tr>
+            <td><input type="text" class="input-nome" required /></td>
+            <td><input type="text" class="input-descricao" /></td>
+            <td><input type="number" class="input-quantidade" min="1" value="1" required /></td>
+            <td><input type="number" class="input-valor" min="0.01" step="0.01" required /></td>
+            <td><button type="button" class="botao remover" title="Remover produto">✕</button></td>
+        </tr>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
