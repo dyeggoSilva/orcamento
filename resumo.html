@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resumo Geral de Produção</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="topo">
+
+        <img src="assets/logoafprint.png" alt="AF Print" />
+
+        <h1>Resumo Geral</h1>
+
+        <nav class="nav-topo">
+            <a href="index.html">Orçamentos</a>
+            <a href="producao.html">Produção Geral</a>
+            <a href="resumo.html" class="ativo">Resumo Geral</a>
+        </nav>
+
+    </header>
+
+    <main class="conteudo">
+        
+
+        <section class="cartao">
+            <div class="cabecalho-lista">
+                <h2>Produções criadas</h2>
+                <div class="acoes-cabecalho">
+                    <button type="button" id="btnAtualizarLista" class="botao secundario">Atualizar lista</button>
+                    <button type="button" id="btnBaixarResumo" class="botao primario">Baixar resumo geral</button>
+                </div>
+            </div>
+            <p id="mensagemLista" class="mensagem"></p>
+            <table class="tabela-lista">
+                <thead>
+                    <tr>
+                        <th>Operador(a)</th>
+                        <th>Setor</th>
+                        <th>Data</th>
+                        <th>Qtd. total</th>
+                        <th>Ações</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="corpoLista">
+                    <!-- linhas inseridas via JS -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="resumo.js"></script>
+</body>
+</html>

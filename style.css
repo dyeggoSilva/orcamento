@@ -29,6 +29,30 @@ body {
    width: 150px;
 }
 
+.nav-topo {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-topo a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.nav-topo a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.nav-topo a.ativo {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .config-api {
     display: flex;
     align-items: center;
@@ -211,6 +235,12 @@ input:focus {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .acoes-linha {

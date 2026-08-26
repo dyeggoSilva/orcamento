@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produção Geral</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="topo">
+
+        <img src="assets/logoafprint.png" alt="AF Print" />
+
+        <h1>Produção Geral</h1>
+
+        <nav class="nav-topo">
+            <a href="index.html">Orçamentos</a>
+            <a href="producao.html" class="ativo">Produção Geral</a>
+        </nav>
+
+    </header>
+
+    <main class="conteudo">
+
+        <!-- Formulário de criação -->
+        <section class="cartao">
+            <h2>Nova produção geral</h2>
+            <form id="formProducao">
+
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="nomeOperador">Nome do operador(a)</label>
+                        <input type="text" id="nomeOperador" required />
+                    </div>
+                    <div class="campo">
+                        <label for="setor">Setor</label>
+                        <input type="text" id="setor" required />
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="dataProducao">Data</label>
+                    <input type="date" id="dataProducao" required />
+                </div>
+
+                <h3>Pedidos</h3>
+                <table class="tabela-produtos" id="tabelaPedidos">
+                    <thead>
+                        <tr>
+                            <th>Nome do cliente</th>
+                            <th>Descrição do item</th>
+                            <th>Qtd.</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoPedidos">
+                        <!-- linhas de pedido inseridas via JS -->
+                    </tbody>
+                </table>
+
+                <button type="button" id="btnAddPedido" class="botao secundario">+ Adicionar pedido</button>
+
+                <div class="total-preview">
+                    Quantidade total estimada: <strong id="totalPedidosPreview">0</strong>
+                </div>
+
+                <div class="acoes-form">
+                    <button type="submit" class="botao primario">Criar produção geral</button>
+                </div>
+
+                <p id="mensagemForm" class="mensagem"></p>
+            </form>
+        </section>
+
+        <!-- Lista de produções -->
+            <div id="btnAtualizarLista" class="cabecalho-lista">
+            </div>
+           
+
+    </main>
+
+    <!-- template de linha de pedido (clonado via JS) -->
+    <template id="templateLinhaPedido">
+        <tr>
+            <td><input type="text" class="input-pedido-cliente" required /></td>
+            <td><input type="text" class="input-pedido-item" required /></td>
+            <td><input type="number" class="input-pedido-quantidade" min="1" value="1" required /></td>
+            <td><button type="button" class="botao remover" title="Remover pedido">✕</button></td>
+        </tr>
+    </template>
+
+    <script src="producao.js"></script>
+</body>
+</html>

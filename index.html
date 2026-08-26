@@ -9,10 +9,16 @@
 <body>
 
     <header class="topo">
-        
-        <img src="assets/logoafprint.png" alt="">
-        
+
+        <img src="assets/logoafprint.png" alt="AF Print" />
+
         <h1>Orçamentos</h1>
+
+        <nav class="nav-topo">
+            <a href="index.html" class="ativo">Orçamentos</a>
+            <a href="producao.html">Produção Geral</a>
+           
+        </nav>
 
     </header>
 
@@ -34,9 +40,15 @@
                     </div>
                 </div>
 
-                <div class="campo">
-                    <label for="dataValidade">Válido até</label>
-                    <input type="date" id="dataValidade" required />
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="nomeVendedor">Vendedor(a)</label>
+                        <input type="text" id="nomeVendedor" required />
+                    </div>
+                    <div class="campo">
+                        <label for="dataValidade">Válido até</label>
+                        <input type="date" id="dataValidade" required />
+                    </div>
                 </div>
 
                 <h3>Produtos</h3>
@@ -80,6 +92,7 @@
                 <thead>
                     <tr>
                         <th>Cliente</th>
+                        <th>Vendedor(a)</th>
                         <th>CPF/CNPJ</th>
                         <th>Válido até</th>
                         <th>Total</th>

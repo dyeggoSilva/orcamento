@@ -1,5 +1,5 @@
 // ---------- Configuração ----------
-const inputApiUrl = "https://api-orc-v1.onrender.com";
+const inputApiUrl = "http://localhost:8080";
 
 function getApiUrl() {
     // remove barra final, se houver
@@ -90,6 +90,7 @@ async function criarOrcamento(evento) {
 
     const payload = {
         nomeCliente: document.getElementById("nomeCliente").value.trim(),
+        nomeVendedor: document.getElementById("nomeVendedor").value.trim(),
         cpfCnpj: document.getElementById("cpfCnpj").value.trim(),
         dataValidade: document.getElementById("dataValidade").value,
         produtos: produtos,
@@ -150,6 +151,7 @@ async function carregarListaOrcamentos() {
             const linha = document.createElement("tr");
             linha.innerHTML = `
                 <td>${escapeHtml(orcamento.nomeCliente)}</td>
+                <td>${escapeHtml(orcamento.nomeVendedor)}</td>
                 <td>${escapeHtml(orcamento.cpfCnpj)}</td>
                 <td>${formatarData(orcamento.dataValidade)}</td>
                 <td>${formatarMoeda(total)}</td>
@@ -163,8 +165,6 @@ async function carregarListaOrcamentos() {
             btnBaixarPdf.className = "botao link";
             btnBaixarPdf.addEventListener("click", () => baixarPdf(orcamento.id));
 
-            
-            celulaAcoes.appendChild(document.createTextNode(" | "));
             celulaAcoes.appendChild(btnBaixarPdf);
 
             corpoLista.appendChild(linha);
