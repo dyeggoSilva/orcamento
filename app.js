@@ -1,5 +1,5 @@
 // ---------- Configuração ----------
-const inputApiUrl = "https://api-orc-v1.onrender.com";
+const inputApiUrl = "http://10.100.3.52:8080";
 
 function getApiUrl() {
     // remove barra final, se houver
