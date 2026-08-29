@@ -1,5 +1,5 @@
 // ---------- Configuração ----------
-const inputApiUrl = "10.100.3.52";
+const inputApiUrl = "http://10.100.3.52";
 
 function getApiUrl() {
     return inputApiUrl;
